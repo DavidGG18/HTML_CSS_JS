@@ -1,0 +1,126 @@
+<html>
+<head>
+<title> playlist_www.neverland.com.br </title>
+
+<link rel="stylesheet" href="styless.css">
+
+<sub>
+<h1>  Playlist das melhores músicas do rei do POP </h1>
+</sub>
+
+<p>
+
+
+
+<!-- Criar botão -->
+<button onclick="playAllAudios()"> MeuReproduzir Todos </button>
+
+
+
+<ul>
+    <P>
+    <li> Michael Jackson - Bad </li>
+    <audio controls>
+    <source src="Michael Jackson - Bad.mp3" type="audio/mp3">
+    </audio>
+    </P>
+
+    <p>
+    <li> Michael Jackson - Beat It </li>
+    <audio controls> 
+    <source src="Michael Jackson - Beat It.mp3" type="audio/mp3">
+    </audio>
+    </p>
+     
+    <p>
+    <ol> Michael Jackson - BLACK OR WHITE </ol>    
+    <audio controls>
+    <source src="Michael Jackson - BLACK OR WHITE.mp3" type ="audio/mp3">
+    </audio> 
+
+    <p>
+    <li> Michael Jackson - Dangerous </li>     
+    <audio controls>
+    <source src="Michael Jackson - Dangerous.mp3" type = "audio/mp3">
+    </audio>
+
+    <p>
+    <li> Michael Jackson - Leave Me Alone </li>    
+    <audio controls>
+    <source src="Michael Jackson - Leave Me Alone.mp3" type = "audio/mp3">
+    </audio>
+
+    <p>
+    <li> Michael Jackson - Remember the time </li>    
+    <audio controls>
+    <source src="Michael Jackson - Remember the time.mp3" type = "audio/mp3">
+    </audio>
+
+    <p>
+    <li> Michael Jackson - They Don’t Care About Us </li>    
+    <audio controls>
+    <source src="Michael Jackson - They Don’t Care About Us.mp3" type = "audio/mp3">
+    </audio>
+
+    <p>
+    <li> Michael Jackson - Thriller </li>   
+    <audio controls>
+    <source src="Michael Jackson - Thriller.mp3" type = "audio/mp3">
+    </audio>
+
+    <p>
+    <li> Michael Jackson - Wanna Be Startin' Something </li>    
+    <audio controls>
+    <source src="Michael Jackson - Wanna Be Startin' Something.mp3" type = "audio/mp3">
+    </audio>
+
+    <p>
+    <li> Michael jackson Man In The Mirror </li>
+    <audio controls>
+    <source src="Michael jackson Man In The Mirror.mp3" type = "audio/mp3">
+    </audio>
+
+    <p>
+    <li> Michael-Jackson-Billie Jean </li>    
+    <audio controls>
+    <source src="Michael-Jackson-Billie-Jean.mp3" type = "audio/mp3">
+    </audio>
+
+    <p>
+    <li> Michael Jackson-Smooth Criminal </li>
+    <audio controls>
+    <source src="Michael-Jackson-Smooth-Criminal.mp3" type = "audio/mp3">
+    </audio>
+
+
+</ul>
+
+<!-- Comando Java para reproduzir todos as músicas sucetivamente ao clicar no botão   -->
+<script>
+
+    var audioElements = document.querySelectorAll('audio');
+    var currentAudioIndex = 0;
+    
+    function playAllAudios() {
+        playNextAudio();
+    }
+
+    function playNextAudio() {
+        if (currentAudioIndex < audioElements.length) {
+            audioElements[currentAudioIndex].play();
+            currentAudioIndex++;
+            audioElements[currentAudioIndex - 1].addEventListener( 'ended',playNextAudio);
+            }else{ 
+                
+            }
+    }
+
+
+</script>
+
+<p> 
+
+<h3> <a href="index.html">  Voltar pra página inicial pra página inicial </h3> </a>    
+
+
+</html>
